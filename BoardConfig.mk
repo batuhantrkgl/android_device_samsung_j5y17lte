@@ -18,6 +18,9 @@ DEVICE_PATH := device/samsung/j5y17lte
 # Audio
 BOARD_USE_TFA_AMP := true
 
+# Display
+TARGET_SCREEN_DENSITY := 320
+
 # Assert
 TARGET_OTA_ASSERT_DEVICE := j5y17lte,j5y17ltexx,j5y17ltextc,j5y17lteub
 
