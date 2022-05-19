@@ -38,7 +38,7 @@ TARGET_KERNEL_CONFIG := exynos7870-j5y17lte_defconfig
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_j5y17lte
 TARGET_RECOVERY_DEVICE_MODULES := libinit_j5y17lte
 
-# HIDL
+# Device Manifest
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/manifest.xml
 
 # Releasetools
@@ -47,6 +47,9 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)/releasetools
 # Shims
 TARGET_LD_SHIM_LIBS += \
     /vendor/lib/libbauthserver.so|/vendor/lib/libbauthtzcommon_shim.so
+
+# ANT+
+BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
 # Wifi
 BOARD_WLAN_DEVICE                := bcmdhd
