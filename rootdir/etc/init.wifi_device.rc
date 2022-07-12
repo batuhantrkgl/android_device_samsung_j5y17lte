@@ -14,6 +14,22 @@ on post-fs-data
     chmod 0660 /sys/wifi/cid
     chown wifi root /sys/wifi/wifiver
     chmod 0660 /sys/wifi/wifiver
+<<<<<<< HEAD
+=======
+    chown wifi root /sys/wifi/softap
+    chmod 0660 /sys/wifi/softap
+
+    # for WIFI Antenna
+    write /data/vendor/conn/.wificable.info E
+    chown system root /data/vendor/conn/.wificable.info
+    chmod 0666 /data/vendor/conn/.wificable.info
+    chown wifi root /sys/wifi/wificable
+    chmod 0664 /sys/wifi/wificable
+
+	# for WIFI TRP/TIS
+    chown wifi root /data/vendor/conn/.psm.info
+    chmod 0664 /data/vendor/conn/.psm.info
+>>>>>>> 023cac2 (declare use of oss audio and uprev to android.hardware.soundtrigger@2.3-impl, android.hardware.audio.effect@6.0-impl, android.hardware.audio@6.0-impl, add device speciffic wifi overlay, add fix for hotspot on android 11 for qcom wifi by setting WIFI_AVOID_IFACE_RESET_MAC_CHANGE := true, add missing android.hardware.nfc.uicc.xml, Add parameters for Hotspot 2.0 in wpa_supplicant_overlay.conf, refractor for arrow)
     chown wifi root /sys/wifi/pm
     chmod 0660 /sys/wifi/pm
     chown wifi root /sys/wifi/ant
@@ -29,6 +45,7 @@ on post-fs-data
     chown wifi root /sys/wifi/control_he_enab
     chmod 0660 /sys/wifi/control_he_enab
 
+<<<<<<< HEAD
 on boot
     # for fwpath
     chown wifi root /sys/module/dhd/parameters/firmware_path
@@ -37,3 +54,8 @@ on property:vold.decrypt=trigger_restart_framework
 exec /vendor/bin/hw/macloader
 
 
+=======
+    # for WIFI Antenna Selection
+    chown wifi root /data/vendor/conn/.ant.info
+    chmod 0664 /data/vendor/conn/.ant.info
+>>>>>>> 023cac2 (declare use of oss audio and uprev to android.hardware.soundtrigger@2.3-impl, android.hardware.audio.effect@6.0-impl, android.hardware.audio@6.0-impl, add device speciffic wifi overlay, add fix for hotspot on android 11 for qcom wifi by setting WIFI_AVOID_IFACE_RESET_MAC_CHANGE := true, add missing android.hardware.nfc.uicc.xml, Add parameters for Hotspot 2.0 in wpa_supplicant_overlay.conf, refractor for arrow)
