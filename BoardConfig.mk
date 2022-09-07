@@ -44,6 +44,10 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_j5y17lte
 
 # Device Manifest
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/manifest.xml
+# DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+#      vendor/lineage/config/device_framework_matrix.xml
+
+BUILD_BROKEN_VINTF_PRODUCT_COPY_FILES := true
 
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)/releasetools
@@ -51,6 +55,9 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)/releasetools
 # Shims
 TARGET_LD_SHIM_LIBS += \
     /vendor/lib/libbauthserver.so|/vendor/lib/libbauthtzcommon_shim.so
+
+#Bluetooth
+BOARD_HAVE_BLUETOOTH_QCOM := true
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
