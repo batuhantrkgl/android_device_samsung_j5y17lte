@@ -26,14 +26,8 @@ $(call inherit-product, device/samsung/j5y17lte/device.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions
-<<<<<<<< HEAD:arrow_j5y17lte.mk
-<<<<<<<< HEAD:havoc_j5y17lte.mk
 PRODUCT_DEVICE := j5y17lte
-PRODUCT_NAME := arrow_j5y17lte
-========
-PRODUCT_DEVICE := a3y17lte
-PRODUCT_NAME := lineage_a3y17lte
->>>>>>>> d3a6cdc (a3y17lte:inital lineage 19.1 changes to device tree useing OSS bsp):lineage_a3y17lte.mk
+PRODUCT_NAME := lineage_j5y17lte
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := Galaxy J5 2017
 PRODUCT_MANUFACTURER := samsung
